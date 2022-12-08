@@ -113,11 +113,7 @@ async def private_receive_handler(c: Client, m: Message):
         
         
         
-         text=f"https://stream.url2go.in/st?api=af5e38dfaf8b900b45335173d279b44d7ae4b2e9&url={stream_link}",
-        quote=True,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Learn something interesting 🤔', url=stream_links)]])
-    )
-        
+  
         
         
         
