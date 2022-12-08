@@ -16,8 +16,7 @@ from pyrogram.types import ReplyKeyboardMarkup
 if MY_PASS:
             buttonz=ReplyKeyboardMarkup(
             [
-                ["start⚡️","help📚","login🔑","DC"],
-                ["Subscribe ❤️","ping📡","status📊","maintainers😎"]
+                ["start⚡️","help📚"]
                         
             ],
             resize_keyboard=True
@@ -25,8 +24,7 @@ if MY_PASS:
 else:
             buttonz=ReplyKeyboardMarkup(
             [
-                ["start⚡️","help📚","DC"],
-                ["Subscribe ❤️","ping📡","status📊","maintainers😎"]
+                ["start⚡️","help📚"]
                         
             ],
             resize_keyboard=True
@@ -70,7 +68,7 @@ async def start(b, m):
         except Exception:
             await b.send_message(
                 chat_id=m.chat.id,
-                text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b> <a href='https://t.me/greymatters_bots_discussion'>CLICK HERE FOR SUPPORT </a></b>",
+                text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b> <a href='https://t.me/Hollywood_in_HindiHD'>CLICK HERE FOR SUPPORT </a></b>",
                 
                 disable_web_page_preview=True)
             return
@@ -103,7 +101,7 @@ async def help_handler(bot, message):
         except UserNotParticipant:
             await StreamBot.send_photo(
                 chat_id=message.chat.id,
-                photo="https://telegra.ph/file/ca10e459bc6f48a4ad0f7.jpg",
+                photo="https://telegra.ph/file/19eeb26fa2ce58765917a.jpg",
                 Caption="**𝙹𝙾𝙸𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 𝚃𝙾 𝚄𝚂𝙴 ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
                 reply_markup=InlineKeyboardMarkup(
                     [
@@ -118,7 +116,7 @@ async def help_handler(bot, message):
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [Support](https://t.me/greymatters_bots_discussion).",
+                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [Support](https://t.me/Redxpromotionrobot).",
                 disable_web_page_preview=True)
             return
     await message.reply_text(
@@ -128,8 +126,7 @@ async def help_handler(bot, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("💁‍♂️ Owner", url="https://github.com/GreyMattersBot")],
-                [InlineKeyboardButton("💥 Source Code", url="https://github.com/Greymattersbot/Filestreambot-pro")]
+                [InlineKeyboardButton("💁‍♂️ Owner", url="https://t.me/AmanReDX")]
             ]
         )
     )
