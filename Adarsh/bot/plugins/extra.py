@@ -17,12 +17,12 @@ async def maintainers(b,m):
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="I am Made By [GreyMatter's Bot](https://t.me/GreyMatter_Bots)",
+                    text="I am Made By [AmanReDX](https://t.me/Redxpromotionrobot)",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Owner💻", url=f"https://t.me/GreyMatter_Owner")
+                                InlineKeyboardButton("Owner💻", url=f"https://t.me/Redxpromotionrobot")
                             ]
                         ]
                     ),
@@ -30,7 +30,7 @@ async def maintainers(b,m):
                     disable_web_page_preview=True)
             
          
-@StreamBot.on_message(filters.regex("Subscribe ❤️"))
+@StreamBot.on_message(filters.regex("SubscribeLOL ❤️"))
 async def follow_user(b,m):
     try:
        await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
@@ -42,7 +42,7 @@ async def follow_user(b,m):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Subscribe ❤️", url=f"https://youtube.com/c/GreyMattersBot")
+                                InlineKeyboardButton("Subscribe ❤️", url=f"https://youtube.com/c/redxaman")
                             ]
                         ]
                     ),
@@ -61,7 +61,7 @@ async def start(bot, update):
 
     
     
-@StreamBot.on_message(filters.command("list"))
+@StreamBot.on_message(filters.command("listlol"))
 async def list(l, m):
     LIST_MSG = "Hi! {} Here is a list of all my commands \n \n 1 . `start⚡️` \n 2. `help📚` \n 3. `login🔑` \n 4.`Subscribe ❤️` \n 5. `ping📡` \n 6. `status📊` \n 7. `DC` this tells your telegram dc \n 8. `maintainers😎` "
     await l.send_message(chat_id = m.chat.id,
