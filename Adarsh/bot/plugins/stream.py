@@ -164,71 +164,7 @@ async def channel_receive_handler(bot, broadcast):
 
 
 
-bot.sendChatAction(chat_id=message.chat.id, action="typing")
-ms = message.text
-url = f"https://teraboxvideodownloader.nepcoderdevs.workers.dev/?url={ms}"
 
-try:
-    response = HTTP.get(url)
-    if response.status_code == 200:
-        data = response.json()
-
-   
-        resolutions = data["response"][0]["resolutions"]
-        fast_download_link = resolutions["Fast Download"]
-        hd_video_link = resolutions["HD Video"]
-        thumbnail_url = data["response"][0]["thumbnail"]
-        video_title = data["response"][0]["title"]
-
-     
-        tinyurl_api = "http://tinyurl.com/api-create.php?url="
-        tinyurl_fast_download = tinyurl_api + fast_download_link
-        tinyurl_hd_video = tinyurl_api + hd_video_link
-        shortened_fast_download_link = HTTP.get(tinyurl_fast_download).text
-        shortened_hd_video_link = HTTP.get(tinyurl_hd_video).text
-
-  
-        markup = InlineKeyboardMarkup()
-        markup.row(
-            InlineKeyboardButton(
-                text='➡️ Fast Download',
-                url=shortened_fast_download_link
-            ),
-            InlineKeyboardButton(
-                text='▶️ HD Video',
-                url=shortened_hd_video_link
-            )
-        )
-        markup.row(
-            InlineKeyboardButton(
-                text='Developer',
-                 url ='t.me/Privates_Bots'
-            )
-        )
-
-
-        message_text = f"🎬 <b>Title:</b> {video_title}\nMade with ❤️ by @Privates_Bots"
-
-
-        bot.sendPhoto(
-            chat_id=message.chat.id,
-            photo=thumbnail_url,
-            caption=message_text,
-            parse_mode="HTML",
-            reply_markup=markup
-        )
-    else:
-        bot.sendMessage(
-            chat_id=message.chat.id,
-            text="❌ <b>Error fetching data from Terabox API</b>",
-            parse_mode="HTML"
-        )
-except Exception as e:
-    bot.sendMessage(
-        chat_id=message.chat.id,
-        text=f"❌ <b>Error: {str(e)}</b>",
-        parse_mode="HTML"
-    )
 
 
 
