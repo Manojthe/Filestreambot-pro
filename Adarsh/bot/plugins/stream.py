@@ -93,9 +93,8 @@ async def private_receive_handler(c: Client, m: Message):
             return
 
     # New functionality for Terabox links
-    if m.text and "teraboxapp.com" in m.text:
-        await c.send_chat_action(chat_id=m.chat.id, action="typing")
-        ms = m.text
+bot.sendChatAction(chat_id=message.chat.id, action="typing")
+ms = message.text
         url = f"https://teraboxvideodownloader.nepcoderdevs.workers.dev/?url={ms}"
 
         try:
